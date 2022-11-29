@@ -1,0 +1,47 @@
+{
+  "Customer": [
+    {
+      "name": "aldi",
+      "contact": "123456789",
+      "email": "aldi@gmail.com",
+      "password": "12345",
+      "address": "Bandung",
+      "discount": 10,
+      "typeDiscount": "persentase",
+      "ktp": "https://indonesia.go.id/assets/upload/headline//1574329091_E_KTP.jpg"
+    },
+    {
+      "name": "udin",
+      "contact": "987654321",
+      "email": "udin@gmail.com",
+      "password": "12345",
+      "address": "Jakarta",
+      "discount": 10000,
+      "typeDiscount": "fix",
+      "ktp": "https://indonesia.go.id/assets/upload/headline//1574329091_E_KTP.jpg"
+    }
+  ],
+  "Item": [
+    {
+      "nameItem": "beras",
+      "unit": "kg/pcs",
+      "stock": 10,
+      "price": 100000,
+      "imageUrl": "https://img.okezone.com/content/2022/11/29/320/2716992/stok-menipis-pedagang-beras-cipinang-desak-pemerintah-impor-mwaAgdBtZt.JPG"
+    },
+    {
+      "nameItem": "gula",
+      "unit": "kg/pcs",
+      "stock": 10,
+      "price": 50000,
+      "imageUrl": "http://sehatnegeriku.kemkes.go.id/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-27-at-12.58.03.jpeg"
+    },
+    {
+      "nameItem": "telur",
+      "unit": "kg/pcs",
+      "stock": 20,
+      "price": 25000,
+      "imageUrl": "https://res.cloudinary.com/dk0z4ums3/image/upload/v1592885787/attached_image/inilah-manfaat-telur-dan-cara-menyimpannya.jpg"
+    }
+  ]
+}
