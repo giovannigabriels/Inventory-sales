@@ -15,23 +15,11 @@ module.exports = {
       dateTransaction: {
         type: Sequelize.DATE,
       },
-      customerId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: "Customers",
-          },
-          key: "id",
-        },
+      customer: {
+        type: Sequelize.STRING,
       },
-      itemId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: {
-            tableName: "Items",
-          },
-          key: "id",
-        },
+      item: {
+        type: Sequelize.STRING,
       },
       qty: {
         type: Sequelize.INTEGER,
