@@ -20,7 +20,11 @@ export default {
     ...mapState(useCounterStore, ["items"]),
   },
   methods: {
-    ...mapActions(useCounterStore, ["fetchItems"]),
+    ...mapActions(useCounterStore, ["fetchItems", "addSales"]),
+    async submitBuy() {
+      await this.addSales({ item: this.item, qty: this.quantity });
+      this.fetchItems();
+    },
   },
 };
 </script>
@@ -31,11 +35,11 @@ export default {
     <div class="row mt-3">
       <Card v-for="(item, idx) in items" :key="idx" :item="item" />
 
-      <form v-on:submit.prevent="loginHandler">
+      <form v-on:submit.prevent="submitBuy">
         <div class="mb-3">
           <label for="login-email" class="form-label">Nama Item</label>
           <select class="form-select" required v-model="item">
-            <option value="" selected disabled>-- Select Items --</option>
+            <option value="" selected disabled>-- Select Item --</option>
             <option
               v-for="(item, index) in items"
               :key="index"

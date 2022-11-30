@@ -3,14 +3,15 @@ class Controller {
   static async addSales(req, res, next) {
     try {
       const { id } = req.user;
+      const { item, qty } = req.body;
       const user = await Customer.findOne({
         where: {
           id,
         },
       });
-      const { item, qty } = req.body;
       let codeTransaction = (Math.random() + 1).toString(36).substring(7);
       let dateTransaction = new Date().toLocaleDateString("en-CA");
+      console.log(item, "masuk");
       const findItem = await Item.findOne({
         where: {
           nameItem: item,
@@ -43,6 +44,7 @@ class Controller {
       await findItem.decrement("stock", { by: qty });
       res.status(201).json(data);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
