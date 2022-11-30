@@ -31,7 +31,6 @@ export default {
 
 <template>
   <div class="container mt-3">
-    <h1 class="text-center text-light">Search Game Here</h1>
     <div class="row mt-3">
       <Card v-for="(item, idx) in items" :key="idx" :item="item" />
 

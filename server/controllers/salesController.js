@@ -21,7 +21,7 @@ class Controller {
         throw { name: "not enough stock" };
       }
       let diskon = 0;
-      if (user.discount) {
+      if (user.discount !== 0) {
         if (user.typeDiscount === "persentase") {
           diskon = (findItem.price * user.discount) / 100;
         } else {

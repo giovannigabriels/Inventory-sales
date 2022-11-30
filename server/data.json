@@ -19,6 +19,16 @@
       "discount": 10000,
       "typeDiscount": "fix",
       "ktp": "https://indonesia.go.id/assets/upload/headline//1574329091_E_KTP.jpg"
+    },
+    {
+      "name": "zaki",
+      "contact": "987654321",
+      "email": "zaki@gmail.com",
+      "password": "12345",
+      "address": "Jakarta",
+      "discount": 0,
+      "typeDiscount": "",
+      "ktp": "https://indonesia.go.id/assets/upload/headline//1574329091_E_KTP.jpg"
     }
   ],
   "Item": [
