@@ -8,9 +8,27 @@ export default {
   },
   methods: {
     logoutHandler() {
-      localStorage.clear();
-      this.isLogin = false;
-      this.$router.push("/login");
+      Swal.fire({
+        title: "Are you sure you want to log out?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, logout!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.clear();
+          this.isLogin = false;
+          this.$router.push("/login");
+          Swal.fire({
+            position: "top",
+            icon: "success",
+            title: `Logout Success!`,
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      });
     },
   },
 };

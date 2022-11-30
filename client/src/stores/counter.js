@@ -19,8 +19,20 @@ export const useCounterStore = defineStore("counter", {
         localStorage.setItem("access_token", data.data.access_token);
         this.isLogin = true;
         this.router.push("/");
+        Swal.fire({
+          position: "top",
+          icon: "success",
+          title: `Success login`,
+          showConfirmButton: false,
+          timer: 1500,
+        });
       } catch (error) {
-        console.log(error);
+        Swal.fire({
+          title: "Error!",
+          text: `${error.response.data.message}`,
+          icon: "error",
+          confirmButtonText: "OK",
+        });
       }
     },
     async fetchItems() {
